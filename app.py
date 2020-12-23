@@ -4,7 +4,7 @@ from ippanel import Client
 import RPi.GPIO as GPIO
 
 api_key = "api-key"
-sms = Client('FJ1bf7ekSw2R9RbDEjf7UK35C6PewWsKtqOGgUj5yx0=')
+sms = Client(API)
 
 app = Flask(__name__)
 
