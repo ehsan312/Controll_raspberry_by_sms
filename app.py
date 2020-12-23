@@ -4,7 +4,7 @@ from ippanel import Client
 import RPi.GPIO as GPIO
 
 api_key = "api-key"
-sms = Client(API)
+sms = Client(config.api_keys)
 
 app = Flask(__name__)
 
@@ -13,12 +13,14 @@ app = Flask(__name__)
 def main_page():
     return "Hi"
 
-@app.route('/v1/get_sms')
-def get_sms():
+@app.route('/v1/process')
+def process():
     a = sms.fetch_inbox()
     b = a[0][0]
     return b.message
-def turn_on()
+
+
+def turn_on():
     c = get_sms()
     if c == "1":
         for i in range(a):
@@ -28,3 +30,5 @@ def turn_on()
 
 
 
+if __name__ == "__main__":
+    app.run("0.0.0.0", 5000, debug=True)
