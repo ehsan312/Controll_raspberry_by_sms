@@ -1,4 +1,5 @@
 from flask import Flask
+import config
 import ippanel
 from ippanel import Client
 import RPi.GPIO as GPIO
